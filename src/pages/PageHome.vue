@@ -1,5 +1,11 @@
 <script setup lang="ts">
+  import PageHomeSocial from './PageHome-Social.vue';
   import HomeTitle from './PageHome-Title.vue';
+
+  import TelegramIcon from '@/assets/icon/telegram-color.svg';
+  import FaIcon from '@/assets/icon/fa-color.png';
+  import InstagramIcon from '@/assets/icon/instagram-color.png';
+  import BlueskyIcon from '@/assets/icon/bluesky-color.png';
 </script>
 
 <template>
@@ -8,22 +14,26 @@
       <HomeTitle />
 
       <div class="page-home-socials">
-        <a target="_blank" href="https://t.me/JairS19">
-          <img src="@/assets/icon/telegram-color.svg" alt="Telegram" />
-        </a>
-        <a target="_blank" href="https://furaffinity.net/user/RoqueMapache1">
-          <img src="@/assets/icon/fa-color.png" alt="Furaffinity" />
-        </a>
-        <a target="_blank" href="https://instagram.com/roquemapache">
-          <img src="@/assets/icon/instagram-color.png" alt="Instagram" />
-        </a>
-        <a target="_blank" href="https://bsky.app/profile/roquemapache.bsky.social">
-          <img src="@/assets/icon/bluesky-color.png" alt="Bluesky" />
-        </a>
+        <PageHomeSocial href="https://t.me/JairS19" :icon="TelegramIcon" alt="Telegram" />
+        <PageHomeSocial
+          href="https://furaffinity.net/user/RoqueMapache1"
+          :icon="FaIcon"
+          alt="Furaffinity"
+        />
+        <PageHomeSocial
+          href="https://instagram.com/roquemapache"
+          :icon="InstagramIcon"
+          alt="Instagram"
+        />
+        <PageHomeSocial
+          href="https://bsky.app/profile/roquemapache.bsky.social"
+          :icon="BlueskyIcon"
+          alt="Bluesky"
+        />
       </div>
     </div>
 
-    <img class="image" src="@/assets/trim.jpg" />
+    <img class="image" src="@/assets/roque.jpg" />
   </div>
 </template>
 
@@ -50,14 +60,6 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
-
-        & > a {
-          & > img {
-            width: 2rem;
-            height: 2rem;
-          }
-          object-fit: contain;
-        }
       }
     }
     .image {
