@@ -5,7 +5,6 @@
 <template>
   <div class="page-home-title">
     <h1>{{ title }}</h1>
-    <!-- <span>{{ title }}</span> -->
   </div>
 </template>
 
