@@ -14,10 +14,10 @@
 
 <style scoped lang="scss">
   .page-home-social {
+    object-fit: contain;
     & > img {
       width: 2rem;
       height: 2rem;
     }
-    object-fit: contain;
   }
 </style>
